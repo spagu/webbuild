@@ -13,7 +13,7 @@ USE_PERL5=      yes
 RUN_DEPENDS+=   p5-JSON>=2.90_1:${PORTSDIR}/converters/p5-JSON
 
 do-install:
-        @${CP} -R ${WRKSRC}/src/${PORTNAME}.pl ${STAGEDIR}${PREFIX}/sbin/${PORTNAME}
-        @${CHMOD} 777 ${STAGEDIR}${PREFIX}/sbin/${PORTNAME}
+	@${CP} -R ${WRKSRC}/src/${PORTNAME}.pl ${STAGEDIR}${PREFIX}/sbin/${PORTNAME}
+	@${CHMOD} 777 ${STAGEDIR}${PREFIX}/sbin/${PORTNAME}
 
 .include <bsd.port.mk>
