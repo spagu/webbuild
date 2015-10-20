@@ -5,7 +5,7 @@ Package that allows to build a private pkg's from package.json files.
 ## Requirements
  FreeBSD 10+
 ```bash 
- pkg install make bash
+ pkg install make bash p5-JSON
 ```
 
  Other requirements should be included inside a package.
@@ -30,9 +30,9 @@ Package that allows to build a private pkg's from package.json files.
 GH_VERSION=`git ls-remote --tags ${GIT_URL} | tail -n 1 |  tail -n 1 | sed 's/.*refs\/tags\///g'`
 make clean
 rm -f distinfo
-make VERSION=${GH_VERSION} makesum
-make VERSION=${GH_VERSION} makeplis
-make VERSION=${GH_VERSION} package
+make DISTVERSION=${GH_VERSION} makesum
+make DISTVERSION=${GH_VERSION} makeplis
+make DISTVERSION=${GH_VERSION} package
 sudo pkg install work/pkg/webbuild.zxy
 ```
 
