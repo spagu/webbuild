@@ -42,6 +42,12 @@ cd work/pkg/
 pkg install webbuild
 ```
 
+## Uninstall
+```bash
+pkg remove webbuild
+```
+
+
 ## Usage
 ```bash
 webbuild {source_json} {requirements}
