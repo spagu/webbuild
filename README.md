@@ -20,6 +20,7 @@ Package that allows to build a private pkg's from package.json files.
  make package
 ```
 
+
 ## Automate Build with Jenkins
 1. create new job (make sure jenkins has a github plugin installed)
 2. add github link
